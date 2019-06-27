@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from Crypto.Hash import SHA256, MD5
 import sqlite3
-
+import webbrowser
 from constants import *
 from crypto_util import SimpleCrypto, get_iv
 from autho import *
@@ -122,4 +122,5 @@ def decrypt():
     return render_template("decrypt.html", user=user, server=raw[0].decode(), pc=raw[1].decode(), other=raw[2].decode())
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8888)
+    webbrowser.open_new("localhost:3303/")
+    app.run(debug=False, port=3303)

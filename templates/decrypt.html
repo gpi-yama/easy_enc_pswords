@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>Encrypted</title>
-</head>
+{% block content %}
+<a href="/signup">signup</a>
+<a href="/dec_menu">decrypt</a>
+<h1>Decrypted!!</h1>
+<p>
+    <h2>user: {{user}}</h2>
+</p>
+<p>server: {{server}}</p>
+<p>pc: {{pc}}</p>
+<p>other: {{other}}</p>
 
-<body>
-    <a href="/signup">signup</a>
-    <a href="/dec_menu">decrypt</a>
-    <h1>Encrypted!!</h1>
-    <p>{{user}}</p>
-    <p>{{server}}</p>
-    <p>{{pc}}</p>
-    <p>{{other}}</p>
-</body>
-
-</html>
+{% endblock %}

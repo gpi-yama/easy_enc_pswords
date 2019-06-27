@@ -1,0 +1,21 @@
+ul.post {
+    display:table;
+    table-layout: auto;
+    width:10%;
+    padding-bottom: 40px;
+}
+ul.post li {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background-color:red;
+    border-left:1px solid white;
+}
+ul.post li:first-child {
+    border:none;    
+}
+ul.post li a {
+    display:block;
+    text-decoration:none;
+    color:white;
+}

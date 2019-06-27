@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>Title</title>
-</head>
-
-<body>
-    <h1>please input</h1>
-    <form action="/signup/sign" method="POST">
-        user name:
-        <input name="user"></input>
-        password:
-        <input name="password"></input>
-        <button type="submit" class="save btn btn-default">
-            send
-        </button>
-    </form>
-</body>
-
-</html>
+{% block content %}
+<h1>please input</h1>
+<form action="/signup/sign" method="POST">
+    user name:
+    <input name="user"></input>
+    password:
+    <input name="password"></input>
+    <button type="submit" class="save btn btn-default">
+        send
+    </button>
+</form>
+{% endblock %}

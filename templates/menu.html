@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>Title</title>
-</head>
+{% block content %}
 
-<body>
-    <a href="/signup">signup</a>
-    <a href="/dec_menu">decrypt</a>
-    <h1>please input</h1>
-    <form action="/encrypt" method="POST">
-        user name:
-        <input name="user"></input>
-        password:
-        <input type="password" name="password"></input>
-        key:
-        <input type="password" name="key"></input>
-        server:
-        <input name="server"></input>
-        pc:
-        <input name="pc"></input>
-        other:
-        <input name="other"></input>
-        <button type="submit" class="save btn btn-default">
-            send
-        </button>
-    </form>
-</body>
-
-</html>
+<h1>please input to encrypt</h1>
+<form action="/encrypt" method="POST">
+    user name:
+    <input name="user"></input>
+    password:
+    <input type="password" name="password"></input>
+    key:
+    <input type="password" name="key"></input>
+    server:
+    <input name="server"></input>
+    pc:
+    <input name="pc"></input>
+    other:
+    <input name="other"></input>
+    <button type="submit" class="save btn btn-default">
+        send
+    </button>
+</form>
+{% endblock %}
